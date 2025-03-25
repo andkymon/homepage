@@ -1,0 +1,58 @@
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: inline-block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+button {
+    line-height: 1;
+}
+button:hover {
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    position: relative;
+    text-align: center;
+    height: 400px;
+}
+
+header .bg-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    filter: drop-shadow(0px 4px 4px gray); /* Applies box shadow to clip path */
+}
+
+header .bg {
+    height: 100%;
+    background: #f55959; /* Temporary color */
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%); /* Clips lower right corner for slanted look */
+}
