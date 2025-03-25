@@ -40,7 +40,11 @@ button:hover {
 header {
     position: relative;
     text-align: center;
-    height: 400px;
+    height:360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header .bg-container {
@@ -48,11 +52,31 @@ header .bg-container {
     top: 0;
     bottom: 0;
     width: 100%;
-    filter: drop-shadow(0px 4px 4px gray); /* Applies box shadow to clip path */
+    filter: drop-shadow(0px 2px 2px gray); /* Applies box shadow to clip path */
+    z-index: -1;
 }
 
 header .bg {
     height: 100%;
     background: #f55959; /* Temporary color */
     clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%); /* Clips lower right corner for slanted look */
+}
+
+header img {
+    height: 90%;
+    background-image: url("./person.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+}
+
+header h1 {
+    width: 216px;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: start;
+    padding: 8px 16px; 
+    margin-top: -96px;
 }
