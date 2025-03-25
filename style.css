@@ -169,13 +169,13 @@ main {
 
 main h2 {
     text-align: center;
-    width: 400px; /*Based on grid size*/
     margin: 0 auto;
+    max-width: 1250px;
 }
 
 main .project-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 400px);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 24px;
     place-content: center;
     max-width: 1250px;
@@ -183,6 +183,12 @@ main .project-card-container {
 }
 
 main .project-card {
-    height: 400px;
+    height: 300px;
     border: 1px solid black;
+}
+
+@media (min-width: 768px)  {
+    main h2 {
+        text-align: left;
+    }
 }
