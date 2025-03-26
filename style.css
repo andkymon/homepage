@@ -1,3 +1,14 @@
+/* Fonts */
+@font-face {
+    font-family: Jacques Francois;
+    src: url("JacquesFrancois-Regular.woff2");
+}
+
+@font-face {
+    font-family: Josefin Slab;
+    src: url("JosefinSlab-VariableFont_wght.woff2");
+}
+
 /*
 Josh's Custom CSS Reset
 https://www.joshwcomeau.com/css/custom-css-reset/
@@ -45,6 +56,15 @@ button:hover {
 
 body {
     background-color: rgb(255, 200, 255);
+    font-family: Josefin Slab, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: Jacques Francois, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 /* Header */
@@ -91,13 +111,13 @@ header img {
 header h1 {
     width: var(--phone-header-img-width);
     position: absolute;
-    top: 320px;
+    top: 270px;
     color: white;
     padding: 0px 8px;
-    line-height: 1;
+    line-height: 1.25;
     font-size: 2.5rem;
     text-align: center;
-    text-shadow: 0px 4px 4px black;
+    text-shadow: 4px 4px 4px black;
 }
 
 header .about-me {
@@ -137,7 +157,7 @@ header .icons {
         width: 100%;
         text-align: right;
         top: 64px;
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding: var(--tablet-about-me-margin); 
     }
 
@@ -170,7 +190,7 @@ header .icons {
 
     header h1 {
         width: var(--desktop-header-img-width); /*Variable: same as img*/
-        top: 360px;
+        top: 300px;
         font-size: 3rem;
     }
 
