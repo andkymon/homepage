@@ -183,14 +183,15 @@ main .project-card-container {
 }
 
 main .project-card {
+    overflow: scroll;
     height: 500px;
     border: 1px solid black;
 }
 
 main img {
-    height: 200px;
+    height: 300px;
     width: 100%;
-    object-position: center;
+    object-position: 50% 40%;
     object-fit: cover;
 }
 
@@ -212,5 +213,60 @@ main .icons {
 @media (min-width: 768px)  {
     main h2 {
         text-align: left;
+    }
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f55959;
+}
+
+footer .contact-info-container {
+    padding: 64px;
+}
+
+footer p,
+footer .address {
+    margin: 24px 0px;
+}
+
+footer .contact-info {
+    margin: 8px 0px;
+}
+
+footer .contact-info img {
+    height: 16px;
+    width: 16px;
+}
+
+footer .icons {
+    height: 36px;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 32px; /*Variable: same as */
+}
+
+footer > img{
+    width: 100%;
+}
+
+@media (min-width: 768px)  {
+    footer {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer .contact-info-container {
+        padding-right: 0px;
+    }
+
+    footer > img{
+        width: clamp(300px, 40vw, 600px);
+        height: 480px;
+        margin: 48px;
+        object-fit: cover;
+        object-position: 50% 40%;
     }
 }
