@@ -51,20 +51,31 @@ button:hover {
 :root {
     --phone-header-img-width: 300px;
     --tablet-about-me-margin: 0px 64px;
+    --tablet-header-img-width: clamp(0px, 40vw, 400px);
     --desktop-header-img-width: 400px;
+    --purple-box-shadow: 0px 4px 4px rgb(120, 50, 120)
 }
 
 body {
     background-color: rgb(255, 200, 255);
-    font-family: Josefin Slab, 'Times New Roman', Times, serif, Helvetica, sans-serif
+    font-family: Josefin Slab, 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
 }
 
 h1, h2, h3 {
     font-family: Jacques Francois, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: bold;
 }
 
 h2 {
     font-size: 2rem;
+}
+p {
+    word-break: keep-all;
 }
 
 /* Header */
@@ -80,7 +91,7 @@ header .bg-container {
     bottom: 0;
     height: 300px;
     width: 100%;
-    filter: drop-shadow(0px 2px 2px rgb(120, 0, 120)); /* Applies box shadow to clip path */
+    filter: drop-shadow(var(--purple-box-shadow)); /* Applies box shadow to clip path */
     z-index: -1;
 }
 
@@ -104,7 +115,7 @@ header img {
     background-color: orange;
     border-radius: 16px;
     object-fit: cover;
-    box-shadow: 0px 4px 4px rgb(120, 50, 120);
+    box-shadow: var(--purple-box-shadow);
     margin: 8px;
 }
 
@@ -148,8 +159,8 @@ header .icons {
 
     header img {
         float: left;
-        height: clamp(0px, 40vw, 400px);
-        width: clamp(0px, 40vw, 400px);
+        height: var(--tablet-header-img-width);
+        width: var(--tablet-header-img-width);
         margin: 32px 16px 16px 32px;
     }
 
@@ -166,7 +177,7 @@ header .icons {
         margin-top: 128px;
         text-align: left;
         background-color: rgb(255, 255, 255);
-        box-shadow: 0px 4px 4px rgb(120, 50, 120);
+        box-shadow: var(--purple-box-shadow);
         border-radius: 16px;
     }
 }
