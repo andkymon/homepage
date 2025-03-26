@@ -110,7 +110,7 @@ header .content-container {
     align-items: center;
 }
 
-header img {
+.header-img {
     width: var(--phone-header-img-width);
     background-color: orange;
     border-radius: 16px;
@@ -137,9 +137,19 @@ header .about-me {
 }
 
 header .icons {
-    height: 24px;
     border: 1px solid black;
     margin-top: 24px;
+}
+
+header a {
+    display: block;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+header a img {
+    height: 24px;
 }
 
 @media (max-width: 767px) {
@@ -157,7 +167,7 @@ header .icons {
         display: flow-root;
     }
 
-    header img {
+    .header-img {
         float: left;
         height: var(--tablet-header-img-width);
         width: var(--tablet-header-img-width);
@@ -180,6 +190,10 @@ header .icons {
         box-shadow: var(--purple-box-shadow);
         border-radius: 16px;
     }
+
+    header a {
+        justify-content: right;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -193,7 +207,7 @@ header .icons {
         max-width: 1200px;
     }
 
-    header img {
+    .header-img {
         margin: 0;
         height: var(--desktop-header-img-width);
         width: var(--desktop-header-img-width);
@@ -213,6 +227,10 @@ header .icons {
         z-index: -1;
         background-color: rgb(255, 255, 255);
         box-shadow: 0px 4px 4px rgb(120, 50, 120);    
+    }
+
+    header a {
+        justify-content: right;
     }
 }
 
