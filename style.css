@@ -164,7 +164,7 @@ header .icons {
 
 /* Main */
 main {
-    margin: 0px 64px;
+    margin: 64px;
 }
 
 main h2 {
@@ -183,7 +183,29 @@ main .project-card-container {
 }
 
 main .project-card {
-    height: 300px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+main img {
+    height: 200px;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+main h3,
+main p {
+    padding: 0px 16px;
+}
+
+main h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+main .icons {
+    width: 50%;
     border: 1px solid black;
 }
 
