@@ -142,7 +142,6 @@ header .icons {
 }
 
 header a {
-    display: block;
     margin-top: 24px;
     display: flex;
     justify-content: center;
@@ -275,11 +274,18 @@ main p {
 main h3 {
     display: flex;
     justify-content: space-between;
+    margin: 8px 0px;
 }
 
-main .icons {
-    width: 50%;
+main a {
+    display: flex;
     border: 1px solid black;
+    align-items: center;
+}
+
+main a img {
+    display: block;
+    height: 24px;
 }
 
 @media (min-width: 768px)  {
