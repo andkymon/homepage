@@ -74,6 +74,7 @@ h1 {
 h2 {
     font-size: 2rem;
 }
+
 p {
     word-break: keep-all;
 }
@@ -255,8 +256,10 @@ main .project-card-container {
 
 main .project-card {
     overflow: auto;
-    height: 500px;
-    border: 1px solid black;
+    height: fit-content;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: var(--purple-box-shadow);
 }
 
 main img {
@@ -277,9 +280,13 @@ main h3 {
     margin: 8px 0px;
 }
 
+main p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
 main a {
     display: flex;
-    border: 1px solid black;
     align-items: center;
 }
 
@@ -291,6 +298,10 @@ main a img {
 @media (min-width: 768px)  {
     main h2 {
         text-align: left;
+    }
+
+    main p {
+        font-size: 1.25rem;
     }
 }
 
