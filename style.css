@@ -38,9 +38,13 @@ button:hover {
 
 /* Variables */
 :root {
-    --phone-header-img-width: 200px;
+    --phone-header-img-width: 300px;
     --tablet-about-me-margin: 0px 64px;
     --desktop-header-img-width: 400px;
+}
+
+body {
+    background-color: rgb(255, 200, 255);
 }
 
 /* Header */
@@ -56,14 +60,17 @@ header .bg-container {
     bottom: 0;
     height: 300px;
     width: 100%;
-    filter: drop-shadow(0px 2px 2px gray); /* Applies box shadow to clip path */
+    filter: drop-shadow(0px 2px 2px rgb(120, 0, 120)); /* Applies box shadow to clip path */
     z-index: -1;
 }
 
 header .bg {
+    background-image: url("/bg.png");
+    background-size: cover;
+    background-position: center;
     height: 100%;
-    background: #f55959; /* Temporary color */
-    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%); /* Clips lower right corner for slanted look */
+    background-color: magenta;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%); /* Clips lower right corner for/ slanted look */
 }
 
 header .content-container {
@@ -74,30 +81,40 @@ header .content-container {
 
 header img {
     width: var(--phone-header-img-width);
-    border: 1px solid black;
+    background-color: orange;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0px 4px 4px rgb(120, 50, 120);
     margin: 8px;
 }
 
 header h1 {
     width: var(--phone-header-img-width);
     position: absolute;
-    top: 240px;
+    top: 320px;
     color: white;
     padding: 0px 8px;
     line-height: 1;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 0px 4px 4px black;
 }
 
 header .about-me {
     padding: 36px;
     text-align: center;
-    border: 1px solid black; /* Temporar */
 }
 
 header .icons {
     height: 24px;
     border: 1px solid black;
     margin-top: 24px;
+}
+
+@media (max-width: 767px) {
+    header .about-me {
+        margin: 0px 5vw;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px)  {
@@ -113,8 +130,7 @@ header .icons {
         float: left;
         height: clamp(0px, 40vw, 400px);
         width: clamp(0px, 40vw, 400px);
-        margin-left: 32px;
-        margin-top: 32px;
+        margin: 32px 16px 16px 32px;
     }
 
     header h1 {
@@ -129,6 +145,9 @@ header .icons {
         margin: var(--tablet-about-me-margin);
         margin-top: 128px;
         text-align: left;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 4px 4px rgb(120, 50, 120);
+        border-radius: 16px;
     }
 }
 
@@ -153,18 +172,22 @@ header .icons {
         width: var(--desktop-header-img-width); /*Variable: same as img*/
         top: 360px;
         font-size: 3rem;
-        text-align: center;
     }
 
     header .about-me {
         text-align: left;
         flex: 1;
+        margin-left: 0;
+        border-radius: 0px 8px 8px 0px;
+        z-index: -1;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 4px 4px rgb(120, 50, 120);    
     }
 }
 
 /* Main */
 main {
-    margin: 64px;
+    margin: 32px 64px;
 }
 
 main h2 {
@@ -183,7 +206,7 @@ main .project-card-container {
 }
 
 main .project-card {
-    overflow: scroll;
+    overflow: auto;
     height: 500px;
     border: 1px solid black;
 }
@@ -220,7 +243,7 @@ main .icons {
 footer {
     display: flex;
     flex-direction: column;
-    background-color: #f55959;
+    background-color: magenta;
 }
 
 footer .contact-info-container {
