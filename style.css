@@ -96,7 +96,7 @@ header .bg-container {
 }
 
 header .bg {
-    background-image: url("/bg.png");
+    background-image: url("./assets/images/bg.png");
     background-size: cover;
     background-position: center;
     height: 100%;
@@ -333,7 +333,7 @@ footer .icons {
 
 footer > img {
     width: 100%;
-    background-image: url("./bg.png");
+    background-image: url("./assets/images/bg.png");
     background-size: contain;
 }
 
@@ -348,6 +348,7 @@ footer .to-be-continued {
 
 footer .attribution {
     font-size: 0.75rem;
+    margin-top: 8px;
 }
 
 footer a {
