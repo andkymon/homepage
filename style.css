@@ -256,13 +256,12 @@ main .project-card-container {
 
 main .project-card {
     overflow: auto;
-    height: fit-content;
     background-color: white;
     border-radius: 16px;
     box-shadow: var(--purple-box-shadow);
 }
 
-main img {
+.project-card > img {
     height: 300px;
     width: 100%;
     object-position: 50% 40%;
@@ -293,6 +292,8 @@ main a {
 main a img {
     display: block;
     height: 24px;
+    min-width: 24px;
+    margin-left: 16px;
 }
 
 @media (min-width: 768px)  {
@@ -328,6 +329,7 @@ footer .contact-info {
     display: flex;
     align-items: center;
     gap: 8px;
+    word-break: break-all;
 }
 
 footer .contact-info img {
