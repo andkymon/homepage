@@ -161,6 +161,7 @@ header h1 {
   font-size: 2.5rem;
   text-align: center;
   text-shadow: 4px 4px 4px black;
+  z-index: 2;
 }
 
 header .about-me {
@@ -169,13 +170,12 @@ header .about-me {
 }
 
 header .link-container {
-    width: 100%;
-    display: flex;
-    justify-content: right;
+  width: 100%;
+  display: flex;
+  justify-content: right;
 }
 
-header a {      
-    
+header a {
   margin-top: 24px;
   display: flex;
   justify-content: center;
@@ -424,13 +424,13 @@ footer a {
 
 /* Animations */
 @media (prefers-reduced-motion: no-preference) {
-    a:has(img) > img,
-    .project-card        {
-        transition: 0.3s;
-    }
+  a:has(img) > img,
+  .project-card {
+    transition: 0.3s;
+  }
 
-    a:has(img) > img:hover,
-    a:has(img):focus > img {
-        scale: 1.25;        
-    }           
-}   
+  a:has(img) > img:hover,
+  a:has(img):focus > img {
+    scale: 1.25;
+  }
+}
