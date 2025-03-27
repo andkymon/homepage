@@ -172,13 +172,12 @@ header .about-me {
 header .link-container {
   width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 header a {
   margin-top: 24px;
-  display: flex;
-  justify-content: center;
+  height: 24px;
 }
 
 header a img {
@@ -224,7 +223,7 @@ header a img {
     border-radius: 16px;
   }
 
-  header a {
+  header .link-container {
     justify-content: right;
   }
 }
@@ -263,9 +262,9 @@ header a img {
     box-shadow: 0px 4px 4px rgb(120, 50, 120);
   }
 
-  header a {
+  header .link-container {
     justify-content: right;
-  }
+  } 
 }
 
 /* Main */
